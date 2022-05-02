@@ -3,7 +3,7 @@ import { Select,Grid } from "./Styled";
 import axios from 'axios'
 import { ProductCard } from "./ProductCard";
 
-export const Products = () => {
+export const ProductsMen = () => {
 
   const [products, setproducts] = useState([])
   const [selectVal, setselectVal] = useState("")
@@ -30,8 +30,8 @@ export const Products = () => {
       setproducts([...products].sort((a,b)=>b.price-a.price))
     }
   };
-  
-  const mapData = products.map(item=>{
+  const arrnew = products.filter(item=>item.category==="men")
+  const mapData = arrnew.map(item=>{
     return(
         <ProductCard key={item.id} item={item}/>
     )

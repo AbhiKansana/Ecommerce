@@ -4,4 +4,5 @@ export const Grid = styled.div``;
 
 export const Select = styled.select``;
 
-export const Flex = styled.div``;
+export const Flex = styled.div`
+`;
